@@ -43,6 +43,7 @@ namespace calculatorproj
             this.nine = new System.Windows.Forms.Button();
             this.six = new System.Windows.Forms.Button();
             this.one = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // add
@@ -188,11 +189,21 @@ namespace calculatorproj
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(240, 206);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 553);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.one);
             this.Controls.Add(this.six);
             this.Controls.Add(this.nine);
@@ -230,6 +241,7 @@ namespace calculatorproj
         private System.Windows.Forms.Button nine;
         private System.Windows.Forms.Button six;
         private System.Windows.Forms.Button one;
+        private System.Windows.Forms.Button button1;
     }
 }
 
