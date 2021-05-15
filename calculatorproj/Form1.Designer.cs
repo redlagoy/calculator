@@ -55,7 +55,7 @@ namespace calculatorproj
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.add.Location = new System.Drawing.Point(255, 384);
+            this.add.Location = new System.Drawing.Point(255, 471);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(75, 81);
             this.add.TabIndex = 0;
@@ -74,7 +74,7 @@ namespace calculatorproj
             // equal
             // 
             this.equal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.equal.Location = new System.Drawing.Point(255, 471);
+            this.equal.Location = new System.Drawing.Point(174, 471);
             this.equal.Name = "equal";
             this.equal.Size = new System.Drawing.Size(75, 81);
             this.equal.TabIndex = 2;
@@ -200,7 +200,7 @@ namespace calculatorproj
             // zero
             // 
             this.zero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.zero.Location = new System.Drawing.Point(93, 471);
+            this.zero.Location = new System.Drawing.Point(12, 471);
             this.zero.Name = "zero";
             this.zero.Size = new System.Drawing.Size(75, 81);
             this.zero.TabIndex = 14;
@@ -211,7 +211,7 @@ namespace calculatorproj
             // dec
             // 
             this.dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.dec.Location = new System.Drawing.Point(174, 471);
+            this.dec.Location = new System.Drawing.Point(93, 471);
             this.dec.Name = "dec";
             this.dec.Size = new System.Drawing.Size(75, 81);
             this.dec.TabIndex = 15;
@@ -221,11 +221,11 @@ namespace calculatorproj
             // sign
             // 
             this.sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.sign.Location = new System.Drawing.Point(12, 471);
+            this.sign.Location = new System.Drawing.Point(255, 384);
             this.sign.Name = "sign";
             this.sign.Size = new System.Drawing.Size(75, 81);
             this.sign.TabIndex = 16;
-            this.sign.Text = "+/-";
+            this.sign.Text = "-";
             this.sign.UseVisualStyleBackColor = true;
             // 
             // backspace
