@@ -43,15 +43,21 @@ namespace calculatorproj
             this.nine = new System.Windows.Forms.Button();
             this.six = new System.Windows.Forms.Button();
             this.one = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.zero = new System.Windows.Forms.Button();
+            this.dec = new System.Windows.Forms.Button();
+            this.sign = new System.Windows.Forms.Button();
+            this.backspace = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
+            this.leftpar = new System.Windows.Forms.Button();
+            this.rightpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.add.Location = new System.Drawing.Point(843, 188);
+            this.add.Location = new System.Drawing.Point(255, 384);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 170);
+            this.add.Size = new System.Drawing.Size(75, 81);
             this.add.TabIndex = 0;
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = true;
@@ -62,23 +68,24 @@ namespace calculatorproj
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(906, 80);
+            this.textBox1.Size = new System.Drawing.Size(318, 80);
             this.textBox1.TabIndex = 1;
             // 
             // equal
             // 
             this.equal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.equal.Location = new System.Drawing.Point(843, 364);
+            this.equal.Location = new System.Drawing.Point(255, 471);
             this.equal.Name = "equal";
             this.equal.Size = new System.Drawing.Size(75, 81);
             this.equal.TabIndex = 2;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = true;
+            this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
             // two
             // 
             this.two.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.two.Location = new System.Drawing.Point(681, 364);
+            this.two.Location = new System.Drawing.Point(93, 384);
             this.two.Name = "two";
             this.two.Size = new System.Drawing.Size(75, 81);
             this.two.TabIndex = 3;
@@ -89,19 +96,20 @@ namespace calculatorproj
             // three
             // 
             this.three.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.three.Location = new System.Drawing.Point(762, 364);
+            this.three.Location = new System.Drawing.Point(174, 384);
             this.three.Name = "three";
             this.three.Size = new System.Drawing.Size(75, 81);
             this.three.TabIndex = 4;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = true;
+            this.three.Click += new System.EventHandler(this.three_Click);
             // 
             // five
             // 
             this.five.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.five.Location = new System.Drawing.Point(681, 277);
+            this.five.Location = new System.Drawing.Point(93, 295);
             this.five.Name = "five";
-            this.five.Size = new System.Drawing.Size(75, 79);
+            this.five.Size = new System.Drawing.Size(75, 83);
             this.five.TabIndex = 5;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = true;
@@ -109,7 +117,7 @@ namespace calculatorproj
             // divide
             // 
             this.divide.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.divide.Location = new System.Drawing.Point(843, 101);
+            this.divide.Location = new System.Drawing.Point(255, 208);
             this.divide.Name = "divide";
             this.divide.Size = new System.Drawing.Size(75, 81);
             this.divide.TabIndex = 6;
@@ -119,7 +127,7 @@ namespace calculatorproj
             // eight
             // 
             this.eight.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.eight.Location = new System.Drawing.Point(681, 190);
+            this.eight.Location = new System.Drawing.Point(93, 208);
             this.eight.Name = "eight";
             this.eight.Size = new System.Drawing.Size(75, 81);
             this.eight.TabIndex = 7;
@@ -129,7 +137,7 @@ namespace calculatorproj
             // seven
             // 
             this.seven.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.seven.Location = new System.Drawing.Point(600, 190);
+            this.seven.Location = new System.Drawing.Point(12, 208);
             this.seven.Name = "seven";
             this.seven.Size = new System.Drawing.Size(75, 81);
             this.seven.TabIndex = 8;
@@ -140,9 +148,9 @@ namespace calculatorproj
             // four
             // 
             this.four.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.four.Location = new System.Drawing.Point(600, 277);
+            this.four.Location = new System.Drawing.Point(12, 295);
             this.four.Name = "four";
-            this.four.Size = new System.Drawing.Size(75, 79);
+            this.four.Size = new System.Drawing.Size(75, 83);
             this.four.TabIndex = 9;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = true;
@@ -151,7 +159,7 @@ namespace calculatorproj
             // multiply
             // 
             this.multiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.multiply.Location = new System.Drawing.Point(762, 101);
+            this.multiply.Location = new System.Drawing.Point(255, 295);
             this.multiply.Name = "multiply";
             this.multiply.Size = new System.Drawing.Size(75, 81);
             this.multiply.TabIndex = 10;
@@ -162,7 +170,7 @@ namespace calculatorproj
             // nine
             // 
             this.nine.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.nine.Location = new System.Drawing.Point(762, 190);
+            this.nine.Location = new System.Drawing.Point(174, 208);
             this.nine.Name = "nine";
             this.nine.Size = new System.Drawing.Size(75, 81);
             this.nine.TabIndex = 11;
@@ -172,9 +180,9 @@ namespace calculatorproj
             // six
             // 
             this.six.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.six.Location = new System.Drawing.Point(762, 277);
+            this.six.Location = new System.Drawing.Point(174, 295);
             this.six.Name = "six";
-            this.six.Size = new System.Drawing.Size(75, 81);
+            this.six.Size = new System.Drawing.Size(75, 83);
             this.six.TabIndex = 12;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = true;
@@ -182,28 +190,96 @@ namespace calculatorproj
             // one
             // 
             this.one.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.one.Location = new System.Drawing.Point(600, 364);
+            this.one.Location = new System.Drawing.Point(12, 384);
             this.one.Name = "one";
             this.one.Size = new System.Drawing.Size(75, 81);
             this.one.TabIndex = 13;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // zero
             // 
-            this.button1.Location = new System.Drawing.Point(240, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.zero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.zero.Location = new System.Drawing.Point(93, 471);
+            this.zero.Name = "zero";
+            this.zero.Size = new System.Drawing.Size(75, 81);
+            this.zero.TabIndex = 14;
+            this.zero.Text = "0";
+            this.zero.UseVisualStyleBackColor = true;
+            this.zero.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dec
+            // 
+            this.dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.dec.Location = new System.Drawing.Point(174, 471);
+            this.dec.Name = "dec";
+            this.dec.Size = new System.Drawing.Size(75, 81);
+            this.dec.TabIndex = 15;
+            this.dec.Text = ".";
+            this.dec.UseVisualStyleBackColor = true;
+            // 
+            // sign
+            // 
+            this.sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.sign.Location = new System.Drawing.Point(12, 471);
+            this.sign.Name = "sign";
+            this.sign.Size = new System.Drawing.Size(75, 81);
+            this.sign.TabIndex = 16;
+            this.sign.Text = "+/-";
+            this.sign.UseVisualStyleBackColor = true;
+            // 
+            // backspace
+            // 
+            this.backspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.backspace.Location = new System.Drawing.Point(255, 121);
+            this.backspace.Name = "backspace";
+            this.backspace.Size = new System.Drawing.Size(75, 81);
+            this.backspace.TabIndex = 17;
+            this.backspace.Text = "🡐";
+            this.backspace.UseVisualStyleBackColor = true;
+            // 
+            // cancel
+            // 
+            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.cancel.Location = new System.Drawing.Point(174, 121);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(75, 81);
+            this.cancel.TabIndex = 18;
+            this.cancel.Text = "CE";
+            this.cancel.UseVisualStyleBackColor = true;
+            // 
+            // leftpar
+            // 
+            this.leftpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.leftpar.Location = new System.Drawing.Point(93, 121);
+            this.leftpar.Name = "leftpar";
+            this.leftpar.Size = new System.Drawing.Size(75, 81);
+            this.leftpar.TabIndex = 19;
+            this.leftpar.Text = ")";
+            this.leftpar.UseVisualStyleBackColor = true;
+            // 
+            // rightpar
+            // 
+            this.rightpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.rightpar.Location = new System.Drawing.Point(12, 121);
+            this.rightpar.Name = "rightpar";
+            this.rightpar.Size = new System.Drawing.Size(75, 81);
+            this.rightpar.TabIndex = 20;
+            this.rightpar.Text = "(";
+            this.rightpar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 553);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(340, 564);
+            this.Controls.Add(this.rightpar);
+            this.Controls.Add(this.leftpar);
+            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.backspace);
+            this.Controls.Add(this.sign);
+            this.Controls.Add(this.dec);
+            this.Controls.Add(this.zero);
             this.Controls.Add(this.one);
             this.Controls.Add(this.six);
             this.Controls.Add(this.nine);
@@ -241,7 +317,13 @@ namespace calculatorproj
         private System.Windows.Forms.Button nine;
         private System.Windows.Forms.Button six;
         private System.Windows.Forms.Button one;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button zero;
+        private System.Windows.Forms.Button dec;
+        private System.Windows.Forms.Button sign;
+        private System.Windows.Forms.Button backspace;
+        private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Button leftpar;
+        private System.Windows.Forms.Button rightpar;
     }
 }
 

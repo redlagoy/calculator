@@ -41,5 +41,20 @@ namespace calculatorproj
         {
 
         }
+
+        private void equal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void three_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
