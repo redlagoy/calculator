@@ -66,5 +66,10 @@ namespace calculatorproj
         {
 
         }
+
+        private void btnRightpar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
