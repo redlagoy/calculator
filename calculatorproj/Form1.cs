@@ -56,5 +56,15 @@ namespace calculatorproj
         {
 
         }
+
+        private void one_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "1";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
