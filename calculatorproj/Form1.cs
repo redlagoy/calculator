@@ -24,7 +24,7 @@ namespace calculatorproj
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            textOutput.Text = textOutput.Text + "2";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace calculatorproj
 
         private void three_Click(object sender, EventArgs e)
         {
-
+            textOutput.Text = textOutput.Text + "3";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace calculatorproj
         private void one_Click(object sender, EventArgs e)
         {
             textOutput.Text = textOutput.Text + "1";
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
