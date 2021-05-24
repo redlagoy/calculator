@@ -119,6 +119,7 @@ namespace calculatorproj
             this.btnFive.TabIndex = 5;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = false;
+            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
             // 
             // btnDivide
             // 
@@ -141,6 +142,7 @@ namespace calculatorproj
             this.btnEight.TabIndex = 7;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = false;
+            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
             // 
             // btnSeven
             // 
@@ -188,6 +190,7 @@ namespace calculatorproj
             this.btnNine.TabIndex = 11;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = false;
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnSix
             // 
@@ -199,6 +202,7 @@ namespace calculatorproj
             this.btnSix.TabIndex = 12;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = false;
+            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
             // 
             // btnOne
             // 
@@ -245,6 +249,7 @@ namespace calculatorproj
             this.btnBackspace.TabIndex = 17;
             this.btnBackspace.Text = "🡐";
             this.btnBackspace.UseVisualStyleBackColor = false;
+            this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 
             // btnCancel
             // 
@@ -256,6 +261,7 @@ namespace calculatorproj
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "CE";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Form1
             // 

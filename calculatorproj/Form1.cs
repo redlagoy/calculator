@@ -30,12 +30,12 @@ namespace calculatorproj
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            textOutput.Text = textOutput.Text + "4";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            textOutput.Text = textOutput.Text + "7";
         }
 
         private void add_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace calculatorproj
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            textOutput.Text = textOutput.Text + "0";
         }
 
         private void one_Click(object sender, EventArgs e)
@@ -74,6 +74,39 @@ namespace calculatorproj
         private void btnRightpar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFive_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "5";
+        }
+
+        private void btnSix_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "6";
+        }
+
+        private void btnEight_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "8";
+        }
+
+        private void btnNine_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "9";
+        }
+
+        private void btnBackspace_Click(object sender, EventArgs e)
+        {
+            if (textOutput.Text.Length > 0)
+            {
+                textOutput.Text = textOutput.Text.Remove(textOutput.Text.Length - 1);
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = String.Empty;
         }
     }
 }
