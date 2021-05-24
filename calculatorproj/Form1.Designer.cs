@@ -44,12 +44,9 @@ namespace calculatorproj
             this.btnSix = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.btnDec = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnBackspace = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLeftpar = new System.Windows.Forms.Button();
-            this.btnRightpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -67,6 +64,7 @@ namespace calculatorproj
             // textOutput
             // 
             this.textOutput.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
             this.textOutput.Location = new System.Drawing.Point(12, 12);
             this.textOutput.Name = "textOutput";
@@ -220,22 +218,11 @@ namespace calculatorproj
             this.btnZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.btnZero.Location = new System.Drawing.Point(12, 471);
             this.btnZero.Name = "btnZero";
-            this.btnZero.Size = new System.Drawing.Size(75, 81);
+            this.btnZero.Size = new System.Drawing.Size(156, 81);
             this.btnZero.TabIndex = 14;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = false;
             this.btnZero.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnDec
-            // 
-            this.btnDec.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnDec.Location = new System.Drawing.Point(93, 471);
-            this.btnDec.Name = "btnDec";
-            this.btnDec.Size = new System.Drawing.Size(75, 81);
-            this.btnDec.TabIndex = 15;
-            this.btnDec.Text = ".";
-            this.btnDec.UseVisualStyleBackColor = false;
             // 
             // btnMinus
             // 
@@ -252,9 +239,9 @@ namespace calculatorproj
             // 
             this.btnBackspace.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnBackspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnBackspace.Location = new System.Drawing.Point(255, 121);
+            this.btnBackspace.Location = new System.Drawing.Point(174, 121);
             this.btnBackspace.Name = "btnBackspace";
-            this.btnBackspace.Size = new System.Drawing.Size(75, 81);
+            this.btnBackspace.Size = new System.Drawing.Size(156, 81);
             this.btnBackspace.TabIndex = 17;
             this.btnBackspace.Text = "🡐";
             this.btnBackspace.UseVisualStyleBackColor = false;
@@ -263,35 +250,12 @@ namespace calculatorproj
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnCancel.Location = new System.Drawing.Point(174, 121);
+            this.btnCancel.Location = new System.Drawing.Point(12, 121);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 81);
+            this.btnCancel.Size = new System.Drawing.Size(156, 81);
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "CE";
             this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnLeftpar
-            // 
-            this.btnLeftpar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnLeftpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnLeftpar.Location = new System.Drawing.Point(93, 121);
-            this.btnLeftpar.Name = "btnLeftpar";
-            this.btnLeftpar.Size = new System.Drawing.Size(75, 81);
-            this.btnLeftpar.TabIndex = 19;
-            this.btnLeftpar.Text = ")";
-            this.btnLeftpar.UseVisualStyleBackColor = false;
-            // 
-            // btnRightpar
-            // 
-            this.btnRightpar.BackColor = System.Drawing.Color.DimGray;
-            this.btnRightpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnRightpar.Location = new System.Drawing.Point(12, 121);
-            this.btnRightpar.Name = "btnRightpar";
-            this.btnRightpar.Size = new System.Drawing.Size(75, 81);
-            this.btnRightpar.TabIndex = 20;
-            this.btnRightpar.Text = "(";
-            this.btnRightpar.UseVisualStyleBackColor = false;
-            this.btnRightpar.Click += new System.EventHandler(this.btnRightpar_Click);
             // 
             // Form1
             // 
@@ -299,12 +263,9 @@ namespace calculatorproj
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(340, 564);
-            this.Controls.Add(this.btnRightpar);
-            this.Controls.Add(this.btnLeftpar);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnBackspace);
             this.Controls.Add(this.btnMinus);
-            this.Controls.Add(this.btnDec);
             this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnOne);
             this.Controls.Add(this.btnSix);
@@ -344,12 +305,9 @@ namespace calculatorproj
         private System.Windows.Forms.Button btnSix;
         private System.Windows.Forms.Button btnOne;
         private System.Windows.Forms.Button btnZero;
-        private System.Windows.Forms.Button btnDec;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnBackspace;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnLeftpar;
-        private System.Windows.Forms.Button btnRightpar;
     }
 }
 

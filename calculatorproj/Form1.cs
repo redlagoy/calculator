@@ -16,6 +16,7 @@ namespace calculatorproj
         {
             InitializeComponent();
         }
+        public int functions = 0;
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -39,6 +40,8 @@ namespace calculatorproj
 
         private void add_Click(object sender, EventArgs e)
         {
+            int outputOne;
+            outputOne = int.Parse(textOutput.Text);
 
         }
 
