@@ -18,62 +18,30 @@ namespace calculatorproj
         }
         public int functions = 0;
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            textOutput.Text = textOutput.Text + "2";
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            textOutput.Text = textOutput.Text + "4";
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            textOutput.Text = textOutput.Text + "7";
-        }
-
-        private void add_Click(object sender, EventArgs e)
-        {
-            int outputOne;
-            outputOne = int.Parse(textOutput.Text);
-
-        }
-
-        private void equal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void three_Click(object sender, EventArgs e)
-        {
-            textOutput.Text = textOutput.Text + "3";
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnZero_Click(object sender, EventArgs e)
         {
             textOutput.Text = textOutput.Text + "0";
         }
 
-        private void one_Click(object sender, EventArgs e)
+        private void btnOne_Click(object sender, EventArgs e)
         {
             textOutput.Text = textOutput.Text + "1";
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnTwo_Click(object sender, EventArgs e)
         {
-
+            textOutput.Text = textOutput.Text + "2";
         }
 
-        private void btnRightpar_Click(object sender, EventArgs e)
+        private void btnThree_Click(object sender, EventArgs e)
         {
+            textOutput.Text = textOutput.Text + "3";
+        }
 
+        private void btnFour_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "4";
         }
 
         private void btnFive_Click(object sender, EventArgs e)
@@ -84,6 +52,11 @@ namespace calculatorproj
         private void btnSix_Click(object sender, EventArgs e)
         {
             textOutput.Text = textOutput.Text + "6";
+        }
+
+        private void btnSeven_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = textOutput.Text + "7";
         }
 
         private void btnEight_Click(object sender, EventArgs e)
@@ -104,9 +77,47 @@ namespace calculatorproj
             }
         }
 
+        private void btnSign_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             textOutput.Text = String.Empty;
         }
+
+        private void textOutput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int outputOne;
+            outputOne = int.Parse(textOutput.Text);
+
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
