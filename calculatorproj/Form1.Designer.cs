@@ -127,7 +127,7 @@ namespace calculatorproj
             // 
             this.btnDivide.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnDivide.Location = new System.Drawing.Point(255, 210);
+            this.btnDivide.Location = new System.Drawing.Point(255, 208);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(75, 81);
             this.btnDivide.TabIndex = 6;
@@ -175,9 +175,9 @@ namespace calculatorproj
             // 
             this.btnMultiply.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnMultiply.Location = new System.Drawing.Point(255, 297);
+            this.btnMultiply.Location = new System.Drawing.Point(255, 295);
             this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(75, 81);
+            this.btnMultiply.Size = new System.Drawing.Size(75, 83);
             this.btnMultiply.TabIndex = 10;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@ namespace calculatorproj
             // 
             this.btnNine.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnNine.Location = new System.Drawing.Point(174, 210);
+            this.btnNine.Location = new System.Drawing.Point(174, 208);
             this.btnNine.Name = "btnNine";
             this.btnNine.Size = new System.Drawing.Size(75, 81);
             this.btnNine.TabIndex = 11;

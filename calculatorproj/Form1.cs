@@ -16,7 +16,20 @@ namespace calculatorproj
         {
             InitializeComponent();
         }
-        public int functions = 0;
+
+        public int outputOne, finalOutput, op;
+
+        public void operation(int op)
+        {
+            switch (op)
+            {
+                case 1:
+                    finalOutput = outputOne + int.Parse(textOutput.Text);
+                    textOutput.Text = finalOutput.ToString();
+                    break;
+
+            }
+        }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
@@ -94,8 +107,10 @@ namespace calculatorproj
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int outputOne;
             outputOne = int.Parse(textOutput.Text);
+            textOutput.Clear();
+            textOutput.Focus();
+            op = 1;
 
         }
 
@@ -116,7 +131,7 @@ namespace calculatorproj
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-
+            operation(op);
         }
 
     }
