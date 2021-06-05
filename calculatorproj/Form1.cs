@@ -31,7 +31,13 @@ namespace calculatorproj
                         textOutput.Text = finalOutput.ToString();
                         break;
                     case 2:
+                        textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne - int.Parse(textOutput.Text);
+                        textOutput.Text = finalOutput.ToString();
+                        break;
+                    case 3:
+                        textHistory.Text = textHistory.Text + textOutput.Text;
+                        finalOutput = outputOne * int.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         break;
                 }
@@ -130,7 +136,12 @@ namespace calculatorproj
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-
+            textHistory.Text = textOutput.Text;
+            outputOne = int.Parse(textOutput.Text);
+            textHistory.Text = textHistory.Text + "*";
+            textOutput.Clear();
+            textOutput.Focus();
+            op = 3;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
