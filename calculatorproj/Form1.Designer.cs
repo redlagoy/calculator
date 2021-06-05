@@ -51,6 +51,18 @@ namespace calculatorproj
             btnSign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnSign
+            // 
+            btnSign.BackColor = System.Drawing.Color.DimGray;
+            btnSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            btnSign.Location = new System.Drawing.Point(93, 121);
+            btnSign.Name = "btnSign";
+            btnSign.Size = new System.Drawing.Size(75, 81);
+            btnSign.TabIndex = 19;
+            btnSign.Text = "+/-";
+            btnSign.UseVisualStyleBackColor = false;
+            btnSign.Click += new System.EventHandler(this.btnSign_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -70,6 +82,7 @@ namespace calculatorproj
             this.textOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
             this.textOutput.Location = new System.Drawing.Point(12, 12);
             this.textOutput.Name = "textOutput";
+            this.textOutput.ReadOnly = true;
             this.textOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textOutput.Size = new System.Drawing.Size(318, 80);
             this.textOutput.TabIndex = 1;
@@ -266,18 +279,6 @@ namespace calculatorproj
             this.btnCancel.Text = "CE";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSign
-            // 
-            btnSign.BackColor = System.Drawing.Color.DimGray;
-            btnSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            btnSign.Location = new System.Drawing.Point(93, 121);
-            btnSign.Name = "btnSign";
-            btnSign.Size = new System.Drawing.Size(75, 81);
-            btnSign.TabIndex = 19;
-            btnSign.Text = "+/-";
-            btnSign.UseVisualStyleBackColor = false;
-            btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // Form1
             // 

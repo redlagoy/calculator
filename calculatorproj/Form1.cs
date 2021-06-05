@@ -27,7 +27,10 @@ namespace calculatorproj
                     finalOutput = outputOne + int.Parse(textOutput.Text);
                     textOutput.Text = finalOutput.ToString();
                     break;
-
+                case 2:
+                    finalOutput = outputOne - int.Parse(textOutput.Text);
+                    textOutput.Text = finalOutput.ToString();
+                    break;
             }
         }
 
@@ -121,7 +124,13 @@ namespace calculatorproj
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            if (textOutput.Text != "")
+            {
+                outputOne = int.Parse(textOutput.Text);
+                textOutput.Clear();
+                textOutput.Focus();
+                op = 2;
+            }
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
