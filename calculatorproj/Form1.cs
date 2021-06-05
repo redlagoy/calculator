@@ -21,16 +21,25 @@ namespace calculatorproj
 
         public void operation(int op)
         {
-            switch (op)
+            try
             {
-                case 1:
-                    finalOutput = outputOne + int.Parse(textOutput.Text);
-                    textOutput.Text = finalOutput.ToString();
-                    break;
-                case 2:
-                    finalOutput = outputOne - int.Parse(textOutput.Text);
-                    textOutput.Text = finalOutput.ToString();
-                    break;
+                switch (op)
+                {
+                    case 1:
+                        finalOutput = outputOne + int.Parse(textOutput.Text);
+                        textOutput.Text = finalOutput.ToString();
+                        break;
+                    case 2:
+                        finalOutput = outputOne - int.Parse(textOutput.Text);
+                        textOutput.Text = finalOutput.ToString();
+                        break;
+                }
+            }
+            catch
+            {
+                this.textOutput.Text = "MATH ERROR";
+                outputOne = 0;
+                op = 0;
             }
         }
 
@@ -98,14 +107,9 @@ namespace calculatorproj
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnClearEntry_Click(object sender, EventArgs e)
         {
             textOutput.Text = String.Empty;
-        }
-
-        private void textOutput_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -131,6 +135,46 @@ namespace calculatorproj
                 textOutput.Focus();
                 op = 2;
             }
+        }
+
+        private void btnReciprocal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSquare_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSquareRoot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMemorySave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMemoryRecall_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMemoryClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
