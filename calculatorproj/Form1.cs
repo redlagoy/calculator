@@ -26,6 +26,7 @@ namespace calculatorproj
                 switch (op)
                 {
                     case 1:
+                        textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne + int.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         break;
@@ -39,6 +40,7 @@ namespace calculatorproj
             {
                 this.textOutput.Text = "MATH ERROR";
                 outputOne = 0;
+                finalOutput = 0;
                 op = 0;
             }
         }
@@ -102,19 +104,24 @@ namespace calculatorproj
             }
         }
 
-        private void btnSign_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClearEntry_Click(object sender, EventArgs e)
         {
             textOutput.Text = String.Empty;
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textOutput.Text = String.Empty;
+            textHistory.Text = String.Empty;
+            outputOne = 0;
+            op = 0;
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            textHistory.Text = textOutput.Text;
             outputOne = int.Parse(textOutput.Text);
+            textHistory.Text = textHistory.Text + "+";
             textOutput.Clear();
             textOutput.Focus();
             op = 1;
@@ -130,11 +137,23 @@ namespace calculatorproj
         {
             if (textOutput.Text != "")
             {
+                textHistory.Text = textOutput.Text;
                 outputOne = int.Parse(textOutput.Text);
+                textHistory.Text = textHistory.Text + "-";
                 textOutput.Clear();
                 textOutput.Focus();
                 op = 2;
             }
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            operation(op);
         }
 
         private void btnReciprocal_Click(object sender, EventArgs e)
@@ -172,20 +191,9 @@ namespace calculatorproj
 
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnSign_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnDivide_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEqual_Click(object sender, EventArgs e)
-        {
-            operation(op);
-        }
-
     }
 }
