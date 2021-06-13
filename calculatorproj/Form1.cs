@@ -193,7 +193,11 @@ namespace calculatorproj
 
         private void btnSquare_Click(object sender, EventArgs e)
         {
-
+            textHistory.Text = textOutput.Text + "^2";
+            float square = float.Parse(textOutput.Text) * float.Parse(textOutput.Text);
+            textOutput.Clear();
+            textOutput.Text = square.ToString();
+            
         }
 
         private void btnSquareRoot_Click(object sender, EventArgs e)
