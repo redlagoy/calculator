@@ -18,7 +18,6 @@ namespace calculatorproj
         }
 
         public int outputOne, finalOutput, op;
-
         public void operation(int op)
         {
             try
@@ -38,6 +37,11 @@ namespace calculatorproj
                     case 3:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne * int.Parse(textOutput.Text);
+                        textOutput.Text = finalOutput.ToString();
+                        break;
+                    case 4:
+                        textHistory.Text = textHistory.Text + textOutput.Text;
+                        finalOutput = outputOne / int.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         break;
                 }
@@ -125,41 +129,42 @@ namespace calculatorproj
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            textHistory.Text = textOutput.Text;
+            textHistory.Text = textOutput.Text + "+";
             outputOne = int.Parse(textOutput.Text);
-            textHistory.Text = textHistory.Text + "+";
             textOutput.Clear();
             textOutput.Focus();
             op = 1;
 
         }
 
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            textHistory.Text = textOutput.Text;
-            outputOne = int.Parse(textOutput.Text);
-            textHistory.Text = textHistory.Text + "*";
-            textOutput.Clear();
-            textOutput.Focus();
-            op = 3;
-        }
-
         private void btnMinus_Click(object sender, EventArgs e)
         {
             if (textOutput.Text != "")
             {
-                textHistory.Text = textOutput.Text;
+                textHistory.Text = textOutput.Text + "-";
                 outputOne = int.Parse(textOutput.Text);
-                textHistory.Text = textHistory.Text + "-";
                 textOutput.Clear();
                 textOutput.Focus();
                 op = 2;
             }
         }
 
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            textHistory.Text = textOutput.Text + "*";
+            outputOne = int.Parse(textOutput.Text);
+            textOutput.Clear();
+            textOutput.Focus();
+            op = 3;
+        }
+
         private void btnDivide_Click(object sender, EventArgs e)
         {
-
+            textHistory.Text = textOutput.Text + "/";
+            outputOne = int.Parse(textOutput.Text);
+            textOutput.Clear();
+            textOutput.Focus();
+            op = 4;
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -169,12 +174,15 @@ namespace calculatorproj
 
         private void btnReciprocal_Click(object sender, EventArgs e)
         {
-
+            textHistory.Text = "1/" + textOutput.Text;
+            float reciprocal = 1 / float.Parse(textOutput.Text);
+            textOutput.Clear();
+            textOutput.Text = reciprocal.ToString();
         }
 
         private void btnPercent_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSquare_Click(object sender, EventArgs e)

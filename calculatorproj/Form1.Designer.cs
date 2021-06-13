@@ -305,7 +305,7 @@ namespace calculatorproj
             this.textHistory.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.textHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.textHistory.Location = new System.Drawing.Point(12, 12);
+            this.textHistory.Location = new System.Drawing.Point(12, 22);
             this.textHistory.Name = "textHistory";
             this.textHistory.ReadOnly = true;
             this.textHistory.Size = new System.Drawing.Size(399, 44);
