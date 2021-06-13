@@ -17,7 +17,8 @@ namespace calculatorproj
             InitializeComponent();
         }
 
-        public int outputOne, finalOutput, op;
+        public int op;
+        public float outputOne, finalOutput;
         public void operation(int op)
         {
             try
@@ -26,23 +27,25 @@ namespace calculatorproj
                 {
                     case 1:
                         textHistory.Text = textHistory.Text + textOutput.Text;
-                        finalOutput = outputOne + int.Parse(textOutput.Text);
+                        finalOutput = outputOne + float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         break;
                     case 2:
                         textHistory.Text = textHistory.Text + textOutput.Text;
-                        finalOutput = outputOne - int.Parse(textOutput.Text);
+                        finalOutput = outputOne - float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         break;
                     case 3:
                         textHistory.Text = textHistory.Text + textOutput.Text;
-                        finalOutput = outputOne * int.Parse(textOutput.Text);
+                        finalOutput = outputOne * float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         break;
                     case 4:
                         textHistory.Text = textHistory.Text + textOutput.Text;
-                        finalOutput = outputOne / int.Parse(textOutput.Text);
+                        finalOutput = outputOne / float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
+                        break;
+                    default:
                         break;
                 }
             }
@@ -130,7 +133,7 @@ namespace calculatorproj
         private void btnAdd_Click(object sender, EventArgs e)
         {
             textHistory.Text = textOutput.Text + "+";
-            outputOne = int.Parse(textOutput.Text);
+            outputOne = float.Parse(textOutput.Text);
             textOutput.Clear();
             textOutput.Focus();
             op = 1;
@@ -142,7 +145,7 @@ namespace calculatorproj
             if (textOutput.Text != "")
             {
                 textHistory.Text = textOutput.Text + "-";
-                outputOne = int.Parse(textOutput.Text);
+                outputOne = float.Parse(textOutput.Text);
                 textOutput.Clear();
                 textOutput.Focus();
                 op = 2;
@@ -152,7 +155,7 @@ namespace calculatorproj
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             textHistory.Text = textOutput.Text + "*";
-            outputOne = int.Parse(textOutput.Text);
+            outputOne = float.Parse(textOutput.Text);
             textOutput.Clear();
             textOutput.Focus();
             op = 3;
@@ -161,7 +164,7 @@ namespace calculatorproj
         private void btnDivide_Click(object sender, EventArgs e)
         {
             textHistory.Text = textOutput.Text + "/";
-            outputOne = int.Parse(textOutput.Text);
+            outputOne = float.Parse(textOutput.Text);
             textOutput.Clear();
             textOutput.Focus();
             op = 4;
@@ -182,7 +185,10 @@ namespace calculatorproj
 
         private void btnPercent_Click(object sender, EventArgs e)
         {
-            
+            textHistory.Text = textOutput.Text + "%";
+            float percent = float.Parse(textOutput.Text) / 100;
+            textOutput.Clear();
+            textOutput.Text = percent.ToString();
         }
 
         private void btnSquare_Click(object sender, EventArgs e)
