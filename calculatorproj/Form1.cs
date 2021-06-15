@@ -308,7 +308,25 @@ namespace calculatorproj
 
         private void btnDecimal_Click(object sender, EventArgs e)
         {
-
+            int textLength = textOutput.TextLength;
+            bool dec = false;
+            string currentOutput = textOutput.Text;
+            for (int i = 0; i < textLength; i++)
+            {
+                if (currentOutput[i].ToString() == ".")
+                {
+                    dec = true;
+                    break;
+                }
+                else
+                {
+                    dec = false;
+                }
+            }
+            if (dec == false)
+            {
+                textOutput.Text = textOutput.Text + ".";
+            }
         }
 
         private void btnSign_Click(object sender, EventArgs e)
