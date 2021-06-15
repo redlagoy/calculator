@@ -299,6 +299,7 @@ namespace calculatorproj
             this.btnDecimal.TabIndex = 20;
             this.btnDecimal.Text = ".";
             this.btnDecimal.UseVisualStyleBackColor = false;
+            this.btnDecimal.Click += new System.EventHandler(this.btnDecimal_Click);
             // 
             // textHistory
             // 
@@ -374,6 +375,7 @@ namespace calculatorproj
             // btnMemoryRecall
             // 
             this.btnMemoryRecall.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnMemoryRecall.Enabled = false;
             this.btnMemoryRecall.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.btnMemoryRecall.Location = new System.Drawing.Point(93, 209);
             this.btnMemoryRecall.Name = "btnMemoryRecall";
@@ -386,6 +388,7 @@ namespace calculatorproj
             // btnMemoryClear
             // 
             this.btnMemoryClear.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnMemoryClear.Enabled = false;
             this.btnMemoryClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.btnMemoryClear.Location = new System.Drawing.Point(13, 209);
             this.btnMemoryClear.Name = "btnMemoryClear";

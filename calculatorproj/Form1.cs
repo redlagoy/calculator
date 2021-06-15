@@ -19,6 +19,8 @@ namespace calculatorproj
 
         public int op;
         public float outputOne, finalOutput;
+        public double memoryOutput;
+
         public void operation(int op)
         {
             try
@@ -66,7 +68,6 @@ namespace calculatorproj
         private void btnOne_Click(object sender, EventArgs e)
         {
             textOutput.Text = textOutput.Text + "1";
-
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace calculatorproj
         private void btnClearEntry_Click(object sender, EventArgs e)
         {
             textOutput.Text = String.Empty;
+            textHistory.Text = String.Empty;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -127,7 +129,7 @@ namespace calculatorproj
             textOutput.Text = String.Empty;
             textHistory.Text = String.Empty;
             outputOne = 0;
-            finalOutput = 0;
+            finalOutput = 0; 
             op = 0;
         }
 
@@ -147,7 +149,6 @@ namespace calculatorproj
                 textHistory.Clear();
                 op = 0;
             }
-
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -280,15 +281,32 @@ namespace calculatorproj
 
         private void btnMemorySave_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                memoryOutput = double.Parse(textOutput.Text);
+                btnMemoryClear.Enabled = true;
+                btnMemoryRecall.Enabled = true;
+            }
+            catch
+            {
+                textOutput.Clear();
+                textHistory.Clear();
+            }
         }
 
         private void btnMemoryRecall_Click(object sender, EventArgs e)
         {
-
+            textOutput.Text = memoryOutput.ToString();
         }
 
         private void btnMemoryClear_Click(object sender, EventArgs e)
+        {
+            memoryOutput = 0;
+            btnMemoryClear.Enabled = false;
+            btnMemoryRecall.Enabled = false;
+        }
+
+        private void btnDecimal_Click(object sender, EventArgs e)
         {
 
         }
