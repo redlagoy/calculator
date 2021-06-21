@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace calculatorproj
 {
@@ -308,30 +309,22 @@ namespace calculatorproj
 
         private void btnDecimal_Click(object sender, EventArgs e)
         {
-            int textLength = textOutput.TextLength;
-            bool dec = false;
-            string currentOutput = textOutput.Text;
-            for (int i = 0; i < textLength; i++)
+            if (!textOutput.Text.Contains("."))
             {
-                if (currentOutput[i].ToString() == ".")
-                {
-                    dec = true;
-                    break;
-                }
-                else
-                {
-                    dec = false;
-                }
-            }
-            if (dec == false)
-            {
-                textOutput.Text = textOutput.Text + ".";
+                textOutput.Text += ".";
             }
         }
 
         private void btnSign_Click(object sender, EventArgs e)
         {
-
+            if (!textOutput.Text.Contains("-"))
+            {
+                textOutput.Text = "-" + textOutput.Text;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text.Replace("-", "");
+            }
         }
     }
 }

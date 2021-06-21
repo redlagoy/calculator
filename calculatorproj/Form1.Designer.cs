@@ -31,7 +31,6 @@ namespace calculatorproj
         {
             System.Windows.Forms.Button btnSign;
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textOutput = new System.Windows.Forms.TextBox();
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnThree = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@ namespace calculatorproj
             this.btnMemoryRecall = new System.Windows.Forms.Button();
             this.btnMemoryClear = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.textOutput = new System.Windows.Forms.TextBox();
             btnSign = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -84,18 +84,6 @@ namespace calculatorproj
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // textOutput
-            // 
-            this.textOutput.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.textOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.textOutput.Location = new System.Drawing.Point(12, 62);
-            this.textOutput.Name = "textOutput";
-            this.textOutput.ReadOnly = true;
-            this.textOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textOutput.Size = new System.Drawing.Size(399, 44);
-            this.textOutput.TabIndex = 1;
             // 
             // btnEqual
             // 
@@ -410,12 +398,23 @@ namespace calculatorproj
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // textOutput
+            // 
+            this.textOutput.BackColor = System.Drawing.Color.DimGray;
+            this.textOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.textOutput.Location = new System.Drawing.Point(12, 63);
+            this.textOutput.Name = "textOutput";
+            this.textOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textOutput.Size = new System.Drawing.Size(399, 44);
+            this.textOutput.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(423, 656);
+            this.Controls.Add(this.textOutput);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnMemoryClear);
             this.Controls.Add(this.btnMemoryRecall);
@@ -443,7 +442,6 @@ namespace calculatorproj
             this.Controls.Add(this.btnThree);
             this.Controls.Add(this.btnTwo);
             this.Controls.Add(this.btnEqual);
-            this.Controls.Add(this.textOutput);
             this.Controls.Add(this.btnAdd);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -455,7 +453,6 @@ namespace calculatorproj
         #endregion
 
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textOutput;
         private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.Button btnTwo;
         private System.Windows.Forms.Button btnThree;
@@ -482,6 +479,7 @@ namespace calculatorproj
         private System.Windows.Forms.Button btnMemoryRecall;
         private System.Windows.Forms.Button btnMemoryClear;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox textOutput;
     }
 }
 
