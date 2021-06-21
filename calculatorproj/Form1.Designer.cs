@@ -404,7 +404,7 @@ namespace calculatorproj
             this.textOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.textOutput.Location = new System.Drawing.Point(12, 63);
             this.textOutput.Name = "textOutput";
-            this.textOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textOutput.ReadOnly = true;
             this.textOutput.Size = new System.Drawing.Size(399, 44);
             this.textOutput.TabIndex = 31;
             // 

@@ -47,6 +47,13 @@ namespace calculatorproj
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne / float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
+                        if (textOutput.Text == "∞")
+                        {
+                            textOutput.Text = "MATH ERROR";
+                            outputOne = 0;
+                            finalOutput = 0;
+                            op = 0;
+                        }
                         break;
                     default:
                         break;
