@@ -18,7 +18,7 @@ namespace calculatorproj
             InitializeComponent();
         }
 
-        public int op, opCheck;
+        public int op;
         public float outputOne, finalOutput;
         public double memoryOutput;
 
@@ -32,32 +32,27 @@ namespace calculatorproj
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne + float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
-                        opCheck = 0;
                         break;
                     case 2:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne - float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
-                        opCheck = 0;
                         break;
                     case 3:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne * float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
-                        opCheck = 0;
                         break;
                     case 4:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne / float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
-                        opCheck = 0;
                         if (textOutput.Text == "∞")
                         {
                             textOutput.Text = "MATH ERROR";
                             outputOne = 0;
                             finalOutput = 0;
                             op = 0;
-                            opCheck = 0;
                         }
                         break;
                     default:
@@ -66,11 +61,10 @@ namespace calculatorproj
             }
             catch
             {
-                this.textOutput.Text = "MATH ERROR";
+                textOutput.Text = "MATH ERROR";
                 outputOne = 0;
                 finalOutput = 0;
                 op = 0;
-                opCheck = 0;
             }
         }
 
@@ -135,7 +129,6 @@ namespace calculatorproj
         private void btnClearEntry_Click(object sender, EventArgs e)
         {
             textOutput.Text = String.Empty;
-            textHistory.Text = String.Empty;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -151,15 +144,24 @@ namespace calculatorproj
         {
             try
             {
-                textHistory.Text = textOutput.Text + "+";
-                outputOne = float.Parse(textOutput.Text);
-                textOutput.Clear();
-                textOutput.Focus();
-                op = 1;
-                if (textOutput.Text.Length > 0)
+                if (!string.IsNullOrEmpty(textHistory.Text))
                 {
-                    operation(op);
+                    if (textHistory.Text.Contains("+") || textHistory.Text.Contains('-') || textHistory.Text.Contains('*') || textHistory.Text.Contains('/'))
+                    {
+                        op = 1;
+                        operation(op);
+                        textHistory.Text = textHistory.Text + "+";
+                    }
+                }                
+                else
+                {
+                    textHistory.Text = textOutput.Text + "+";
+                    outputOne = float.Parse(textOutput.Text);
+                    textOutput.Clear();
+                    textOutput.Focus();
+                    op = 1;
                 }
+                
             }
             catch
             {
@@ -171,13 +173,28 @@ namespace calculatorproj
         {
             try
             {
-                if (textOutput.Text != "")
+                if (!string.IsNullOrEmpty(textHistory.Text))
                 {
-                    textHistory.Text = textOutput.Text + "-";
-                    outputOne = float.Parse(textOutput.Text);
-                    textOutput.Clear();
-                    textOutput.Focus();
-                    op = 2;
+                    if (textHistory.Text.Contains("+") || textHistory.Text.Contains('-') || textHistory.Text.Contains('*') || textHistory.Text.Contains('/'))
+                    {
+                        if (textOutput.Text != "")
+                        {
+                            op = 2;
+                            operation(op);
+                            textHistory.Text = textHistory.Text + "-";
+                        }
+                    }
+                }
+                else
+                {
+                    if (textOutput.Text != "")
+                    {
+                        textHistory.Text = textOutput.Text + "-";
+                        outputOne = float.Parse(textOutput.Text);
+                        textOutput.Clear();
+                        textOutput.Focus();
+                        op = 2;
+                    }
                 }
             }
             catch
@@ -190,11 +207,23 @@ namespace calculatorproj
         {
             try
             {
-                textHistory.Text = textOutput.Text + "*";
-                outputOne = float.Parse(textOutput.Text);
-                textOutput.Clear();
-                textOutput.Focus();
-                op = 3;
+                if (!string.IsNullOrEmpty(textHistory.Text))
+                {
+                    if (textHistory.Text.Contains("+") || textHistory.Text.Contains('-') || textHistory.Text.Contains('*') || textHistory.Text.Contains('/'))
+                    {
+                        op = 3;
+                        operation(op);
+                        textHistory.Text = textHistory.Text + "*";
+                    }
+                }
+                else
+                {
+                    textHistory.Text = textOutput.Text + "*";
+                    outputOne = float.Parse(textOutput.Text);
+                    textOutput.Clear();
+                    textOutput.Focus();
+                    op = 3;
+                }
             }
             catch
             {
@@ -206,11 +235,23 @@ namespace calculatorproj
         {
             try
             {
-                textHistory.Text = textOutput.Text + "/";
-                outputOne = float.Parse(textOutput.Text);
-                textOutput.Clear();
-                textOutput.Focus();
-                op = 4;
+                if (!string.IsNullOrEmpty(textHistory.Text))
+                {
+                    if (textHistory.Text.Contains("+") || textHistory.Text.Contains('-') || textHistory.Text.Contains('*') || textHistory.Text.Contains('/'))
+                    {
+                        op = 4;
+                        operation(op);
+                        textHistory.Text = textHistory.Text + "/";
+                    }
+                }
+                else
+                {
+                    textHistory.Text = textOutput.Text + "/";
+                    outputOne = float.Parse(textOutput.Text);
+                    textOutput.Clear();
+                    textOutput.Focus();
+                    op = 4;
+                }
             }
             catch
             {
