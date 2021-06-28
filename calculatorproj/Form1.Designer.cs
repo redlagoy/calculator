@@ -69,7 +69,7 @@ namespace calculatorproj
             btnSign.Name = "btnSign";
             btnSign.Size = new System.Drawing.Size(75, 81);
             btnSign.TabIndex = 19;
-            btnSign.Text = "+/-";
+            btnSign.Text = "±";
             btnSign.UseVisualStyleBackColor = false;
             btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 

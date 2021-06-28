@@ -32,21 +32,25 @@ namespace calculatorproj
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne + float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
+                        outputOne = finalOutput;
                         break;
                     case 2:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne - float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
+                        outputOne = finalOutput;
                         break;
                     case 3:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne * float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
+                        outputOne = finalOutput;
                         break;
                     case 4:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne / float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
+                        outputOne = finalOutput;
                         if (textOutput.Text == "∞")
                         {
                             textOutput.Text = "MATH ERROR";
@@ -55,16 +59,17 @@ namespace calculatorproj
                             op = 0;
                         }
                         break;
-                    default:
-                        break;
                 }
             }
             catch
             {
-                textOutput.Text = "MATH ERROR";
-                outputOne = 0;
-                finalOutput = 0;
-                op = 0;
+                if (textOutput.Text.Length > 0)
+                {
+                    textOutput.Text = "MATH ERROR";
+                    outputOne = 0;
+                    finalOutput = 0;
+                    op = 0;
+                }
             }
         }
 
@@ -142,7 +147,7 @@ namespace calculatorproj
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 if (!string.IsNullOrEmpty(textHistory.Text))
                 {
@@ -160,18 +165,13 @@ namespace calculatorproj
                     textOutput.Clear();
                     textOutput.Focus();
                     op = 1;
-                }
-                
-            }
-            catch
-            {
-                textOutput.Clear();
+                }   
             }
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 if (!string.IsNullOrEmpty(textHistory.Text))
                 {
@@ -197,15 +197,11 @@ namespace calculatorproj
                     }
                 }
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 if (!string.IsNullOrEmpty(textHistory.Text))
                 {
@@ -225,15 +221,11 @@ namespace calculatorproj
                     op = 3;
                 }
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 if (!string.IsNullOrEmpty(textHistory.Text))
                 {
@@ -253,10 +245,6 @@ namespace calculatorproj
                     op = 4;
                 }
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -266,7 +254,7 @@ namespace calculatorproj
 
         private void btnReciprocal_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 textHistory.Text = "1/" + textOutput.Text;
                 float reciprocal = float.Parse(textOutput.Text);
@@ -274,45 +262,33 @@ namespace calculatorproj
                 textOutput.Clear();
                 textOutput.Text = reciprocal.ToString();
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnPercent_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 textHistory.Text = textOutput.Text + "%";
                 float percent = float.Parse(textOutput.Text) / 100;
                 textOutput.Clear();
                 textOutput.Text = percent.ToString();
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnSquare_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 textHistory.Text = textOutput.Text + "^2";
                 float square = float.Parse(textOutput.Text) * float.Parse(textOutput.Text);
                 textOutput.Clear();
                 textOutput.Text = square.ToString();
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnSquareRoot_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 textHistory.Text = "√" + textOutput.Text;
                 double squareRoot = double.Parse(textOutput.Text);
@@ -320,23 +296,15 @@ namespace calculatorproj
                 textOutput.Clear();
                 textOutput.Text = squareRoot.ToString();
             }
-            catch
-            {
-                textOutput.Clear();
-            }
         }
 
         private void btnMemorySave_Click(object sender, EventArgs e)
         {
-            try
+            if (textOutput.Text.Length > 0)
             {
                 memoryOutput = double.Parse(textOutput.Text);
                 btnMemoryClear.Enabled = true;
                 btnMemoryRecall.Enabled = true;
-            }
-            catch
-            {
-                textOutput.Clear();
             }
         }
 
