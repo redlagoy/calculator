@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace calculatorproj
 {
@@ -21,7 +20,8 @@ namespace calculatorproj
         public int op;
         public float outputOne, finalOutput;
         public double memoryOutput;
-
+        public bool checker = false;
+        
         public void operation(int op)
         {
             try
@@ -33,24 +33,28 @@ namespace calculatorproj
                         finalOutput = outputOne + float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         outputOne = finalOutput;
+                        checker = false;
                         break;
                     case 2:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne - float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         outputOne = finalOutput;
+                        checker = false;
                         break;
                     case 3:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne * float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         outputOne = finalOutput;
+                        checker = false;
                         break;
                     case 4:
                         textHistory.Text = textHistory.Text + textOutput.Text;
                         finalOutput = outputOne / float.Parse(textOutput.Text);
                         textOutput.Text = finalOutput.ToString();
                         outputOne = finalOutput;
+                        checker = false;
                         if (textOutput.Text == "∞")
                         {
                             textOutput.Text = "MATH ERROR";
@@ -69,58 +73,149 @@ namespace calculatorproj
                     outputOne = 0;
                     finalOutput = 0;
                     op = 0;
+                    checker = false;
                 }
             }
         }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "0";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "0";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "0";
+            }
         }
 
         private void btnOne_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "1";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "1";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "1";
+            }
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "2";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "2";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "2";
+            }
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "3";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "3";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "3";
+            }
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "4";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "4";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "4";
+            }
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "5";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "5";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "5";
+            }
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "6";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "6";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "6";
+            }
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "7";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "7";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "7";
+            }
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "8";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "8";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "8";
+            }
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            textOutput.Text = textOutput.Text + "9";
+            if (checker == false)
+            {
+                textOutput.Clear();
+                textOutput.Text = textOutput.Text + "9";
+                checker = true;
+            }
+            else
+            {
+                textOutput.Text = textOutput.Text + "9";
+            }
         }
 
         private void btnBackspace_Click(object sender, EventArgs e)
