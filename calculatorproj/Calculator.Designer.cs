@@ -69,7 +69,7 @@ namespace calculatorproj
             btnSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             btnSign.Location = new System.Drawing.Point(13, 122);
             btnSign.Name = "btnSign";
-            btnSign.Size = new System.Drawing.Size(75, 81);
+            btnSign.Size = new System.Drawing.Size(75, 80);
             btnSign.TabIndex = 19;
             btnSign.Text = "±";
             btnSign.UseVisualStyleBackColor = false;
@@ -80,9 +80,9 @@ namespace calculatorproj
             this.btnAdd.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnAdd.Location = new System.Drawing.Point(336, 471);
+            this.btnAdd.Location = new System.Drawing.Point(255, 558);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 169);
+            this.btnAdd.Size = new System.Drawing.Size(75, 81);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -93,9 +93,9 @@ namespace calculatorproj
             this.btnEqual.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnEqual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnEqual.Location = new System.Drawing.Point(255, 559);
+            this.btnEqual.Location = new System.Drawing.Point(336, 471);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(75, 81);
+            this.btnEqual.Size = new System.Drawing.Size(75, 168);
             this.btnEqual.TabIndex = 2;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = false;
@@ -119,7 +119,7 @@ namespace calculatorproj
             this.btnThree.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnThree.Location = new System.Drawing.Point(174, 472);
+            this.btnThree.Location = new System.Drawing.Point(174, 471);
             this.btnThree.Name = "btnThree";
             this.btnThree.Size = new System.Drawing.Size(75, 81);
             this.btnThree.TabIndex = 4;
@@ -145,7 +145,7 @@ namespace calculatorproj
             this.btnDivide.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnDivide.Location = new System.Drawing.Point(336, 209);
+            this.btnDivide.Location = new System.Drawing.Point(255, 295);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(75, 81);
             this.btnDivide.TabIndex = 6;
@@ -197,9 +197,9 @@ namespace calculatorproj
             this.btnMultiply.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnMultiply.Location = new System.Drawing.Point(336, 295);
+            this.btnMultiply.Location = new System.Drawing.Point(255, 382);
             this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(75, 81);
+            this.btnMultiply.Size = new System.Drawing.Size(75, 83);
             this.btnMultiply.TabIndex = 10;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = false;
@@ -262,9 +262,9 @@ namespace calculatorproj
             this.btnMinus.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnMinus.Location = new System.Drawing.Point(336, 382);
+            this.btnMinus.Location = new System.Drawing.Point(255, 471);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(75, 83);
+            this.btnMinus.Size = new System.Drawing.Size(75, 81);
             this.btnMinus.TabIndex = 16;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = false;
@@ -277,7 +277,7 @@ namespace calculatorproj
             this.btnBackspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.btnBackspace.Location = new System.Drawing.Point(255, 122);
             this.btnBackspace.Name = "btnBackspace";
-            this.btnBackspace.Size = new System.Drawing.Size(156, 81);
+            this.btnBackspace.Size = new System.Drawing.Size(156, 80);
             this.btnBackspace.TabIndex = 17;
             this.btnBackspace.Text = "🡐";
             this.btnBackspace.UseVisualStyleBackColor = false;
@@ -301,9 +301,9 @@ namespace calculatorproj
             this.btnDecimal.BackColor = System.Drawing.Color.DimGray;
             this.btnDecimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnDecimal.Location = new System.Drawing.Point(174, 559);
+            this.btnDecimal.Location = new System.Drawing.Point(174, 558);
             this.btnDecimal.Name = "btnDecimal";
-            this.btnDecimal.Size = new System.Drawing.Size(75, 80);
+            this.btnDecimal.Size = new System.Drawing.Size(75, 81);
             this.btnDecimal.TabIndex = 20;
             this.btnDecimal.Text = ".";
             this.btnDecimal.UseVisualStyleBackColor = false;
@@ -325,7 +325,7 @@ namespace calculatorproj
             this.btnReciprocal.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnReciprocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReciprocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnReciprocal.Location = new System.Drawing.Point(255, 471);
+            this.btnReciprocal.Location = new System.Drawing.Point(336, 383);
             this.btnReciprocal.Name = "btnReciprocal";
             this.btnReciprocal.Size = new System.Drawing.Size(75, 82);
             this.btnReciprocal.TabIndex = 22;
@@ -338,9 +338,9 @@ namespace calculatorproj
             this.btnPercent.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnPercent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnPercent.Location = new System.Drawing.Point(255, 382);
+            this.btnPercent.Location = new System.Drawing.Point(255, 212);
             this.btnPercent.Name = "btnPercent";
-            this.btnPercent.Size = new System.Drawing.Size(75, 83);
+            this.btnPercent.Size = new System.Drawing.Size(75, 78);
             this.btnPercent.TabIndex = 23;
             this.btnPercent.Text = "%";
             this.btnPercent.UseVisualStyleBackColor = false;
@@ -351,7 +351,7 @@ namespace calculatorproj
             this.btnSquare.BackColor = System.Drawing.Color.DimGray;
             this.btnSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnSquare.Location = new System.Drawing.Point(255, 295);
+            this.btnSquare.Location = new System.Drawing.Point(336, 295);
             this.btnSquare.Name = "btnSquare";
             this.btnSquare.Size = new System.Drawing.Size(75, 81);
             this.btnSquare.TabIndex = 24;
@@ -364,9 +364,9 @@ namespace calculatorproj
             this.btnSquareRoot.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnSquareRoot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSquareRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnSquareRoot.Location = new System.Drawing.Point(255, 209);
+            this.btnSquareRoot.Location = new System.Drawing.Point(336, 212);
             this.btnSquareRoot.Name = "btnSquareRoot";
-            this.btnSquareRoot.Size = new System.Drawing.Size(75, 80);
+            this.btnSquareRoot.Size = new System.Drawing.Size(75, 78);
             this.btnSquareRoot.TabIndex = 25;
             this.btnSquareRoot.Text = "√";
             this.btnSquareRoot.UseVisualStyleBackColor = false;
@@ -377,7 +377,7 @@ namespace calculatorproj
             this.btnMemorySave.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnMemorySave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMemorySave.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnMemorySave.Location = new System.Drawing.Point(174, 209);
+            this.btnMemorySave.Location = new System.Drawing.Point(174, 211);
             this.btnMemorySave.Name = "btnMemorySave";
             this.btnMemorySave.Size = new System.Drawing.Size(75, 79);
             this.btnMemorySave.TabIndex = 26;
