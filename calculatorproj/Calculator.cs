@@ -21,7 +21,7 @@ namespace calculatorproj
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "0";
@@ -35,7 +35,7 @@ namespace calculatorproj
 
         private void btnOne_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "1";
@@ -49,7 +49,7 @@ namespace calculatorproj
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "2";
@@ -63,7 +63,7 @@ namespace calculatorproj
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "3";
@@ -77,7 +77,7 @@ namespace calculatorproj
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "4";
@@ -91,7 +91,7 @@ namespace calculatorproj
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "5";
@@ -105,7 +105,7 @@ namespace calculatorproj
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "6";
@@ -119,7 +119,7 @@ namespace calculatorproj
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "7";
@@ -133,7 +133,7 @@ namespace calculatorproj
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "8";
@@ -147,7 +147,7 @@ namespace calculatorproj
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            if (calculation.checker == false)
+            if (calculation.checker == false) //checks whether you have already done a calculation
             {
                 textOutput.Clear();
                 textOutput.Text = textOutput.Text + "9";
@@ -161,7 +161,7 @@ namespace calculatorproj
 
         private void btnBackspace_Click(object sender, EventArgs e)
         {
-            if (textOutput.Text.Length > 0)
+            if (textOutput.Text.Length > 0) //checks whether you have inputted a number 
             {
                 textOutput.Text = textOutput.Text.Remove(textOutput.Text.Length - 1);
             }
@@ -169,11 +169,13 @@ namespace calculatorproj
 
         private void btnClearEntry_Click(object sender, EventArgs e)
         {
+            //clears the output textbox
             textOutput.Text = String.Empty;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            //clears everything
             textOutput.Text = String.Empty;
             textHistory.Text = String.Empty;
             calculation.outputOne = 0;
@@ -186,7 +188,7 @@ namespace calculatorproj
         {
             calculation.outputText = textOutput.Text;
             calculation.historyText = textHistory.Text;
-            calculation.Addition();
+            calculation.Addition(); // calls the addition function from the class
             textHistory.Text = calculation.historyText;
             textOutput.Text = calculation.outputText;
         }
@@ -195,7 +197,7 @@ namespace calculatorproj
         {
             calculation.outputText = textOutput.Text;
             calculation.historyText = textHistory.Text;
-            calculation.Subraction();
+            calculation.Subraction(); // calls the subtraction function from the class
             textHistory.Text = calculation.historyText;
             textOutput.Text = calculation.outputText;
         }
@@ -204,7 +206,7 @@ namespace calculatorproj
         {
             calculation.outputText = textOutput.Text;
             calculation.historyText = textHistory.Text;
-            calculation.Multiplication();
+            calculation.Multiplication(); // calls the multiplication function from the class
             textHistory.Text = calculation.historyText;
             textOutput.Text = calculation.outputText;
         }
@@ -213,7 +215,7 @@ namespace calculatorproj
         {
             calculation.outputText = textOutput.Text;
             calculation.historyText = textHistory.Text;
-            calculation.Division();
+            calculation.Division(); // calls the division function from the class
             textHistory.Text = calculation.historyText;
             textOutput.Text = calculation.outputText;
         }
@@ -221,7 +223,7 @@ namespace calculatorproj
         private void btnEqual_Click(object sender, EventArgs e)
         {
             calculation.outputText = textOutput.Text;
-            calculation.operation(calculation.op);
+            calculation.operation(calculation.op); // calls the operation function from the class
             textHistory.Text = calculation.historyText;
             textOutput.Text = calculation.outputText;
 
@@ -297,7 +299,7 @@ namespace calculatorproj
 
         private void btnDecimal_Click(object sender, EventArgs e)
         {
-            if (!textOutput.Text.Contains("."))
+            if (!textOutput.Text.Contains(".")) //checks whether the output textbox has already a "." in it
             {
                 textOutput.Text += ".";
             }
@@ -305,7 +307,7 @@ namespace calculatorproj
 
         private void btnSign_Click(object sender, EventArgs e)
         {
-            if (!textOutput.Text.Contains("-"))
+            if (!textOutput.Text.Contains("-")) //checkes whether the output textbox has already a "-" in it.
             {
                 textOutput.Text = "-" + textOutput.Text;
             }

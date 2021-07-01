@@ -8,6 +8,7 @@ namespace calculatorproj
 {
     class classOperation
     {
+        //initializing the different variables that will be called from the calculator
         public string outputText, historyText;
         public int op;
         public float outputOne, finalOutput;
@@ -16,9 +17,9 @@ namespace calculatorproj
 
         public void operation(int op)
         {
-            try
+            try //try for identifying whether the calculation can be solved
             {
-                switch (op)
+                switch (op) //using switch to know what operation will be used
                 {
                     case 1:
                         historyText = historyText + outputText;
@@ -47,7 +48,7 @@ namespace calculatorproj
                         outputText = finalOutput.ToString();
                         outputOne = finalOutput;
                         checker = false;
-                        if (outputText == "∞" || outputText == "-∞")
+                        if (outputText == "∞" || outputText == "-∞") //checks for infinity so that it will output "Math Error"
                         {
                             outputText = "MATH ERROR";
                             outputOne = 0;
@@ -57,7 +58,7 @@ namespace calculatorproj
                         break;
                 }
             }
-            catch
+            catch //catches if the calculation cannot be solved
             {
                 if (outputText.Length > 0)
                 {
@@ -72,11 +73,11 @@ namespace calculatorproj
 
         public void Addition()
         {
-            if (outputText.Length > 0)
+            if (outputText.Length > 0) //checks whether you have already inputted a number 
             {
-                if (!string.IsNullOrEmpty(historyText))
+                if (!string.IsNullOrEmpty(historyText)) //checks the history textbox if there is already a previous input
                 {
-                    if (historyText.Contains("+") || historyText.Contains('-') || historyText.Contains('*') || historyText.Contains('/'))
+                    if (historyText.Contains("+") || historyText.Contains('-') || historyText.Contains('*') || historyText.Contains('/')) //checks if the history textbox contain the different operation 
                     {
                         op = 1;
                         operation(op);
@@ -101,7 +102,7 @@ namespace calculatorproj
                 {
                     if (historyText.Contains("+") || historyText.Contains('-') || historyText.Contains('*') || historyText.Contains('/'))
                     {
-                        if (outputText != "")
+                        if (outputText != "") //checks if the output textbox does not have a empty string
                         {
                             op = 2;
                             operation(op);
